@@ -1,7 +1,7 @@
-import { newEntrySchema, type NewDiaryEntry } from './types.ts';
+import { NewEntrySchema, type NewDiaryEntry } from './types.ts';
 
 const parseNewDiaryEntry = (object: unknown): NewDiaryEntry => {
-  return newEntrySchema.parse(object);
+  return NewEntrySchema.parse(object);
 };
 
 export default parseNewDiaryEntry;

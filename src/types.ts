@@ -19,14 +19,14 @@ export const Visibility = {
 
 export type Visibility = typeof Visibility[keyof typeof Visibility];
 
-export const newEntrySchema = z.object({
+export const NewEntrySchema = z.object({
   weather: z.enum(Weather),
   visibility: z.enum(Visibility),
   date: z.iso.date(),
   comment: z.string().optional()
 });
 
-export type NewDiaryEntry = z.infer<typeof newEntrySchema>; 
+export type NewDiaryEntry = z.infer<typeof NewEntrySchema>; 
 
 export interface DiaryEntry extends NewDiaryEntry {
   id: number;
